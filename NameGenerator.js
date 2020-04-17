@@ -1,4 +1,4 @@
-var SecretSanta = function () {
+var NameGenerator = function () {
 
     this.names = [];
 
@@ -7,7 +7,7 @@ var SecretSanta = function () {
 };
 
 
-SecretSanta.prototype.add = function ( name ) {
+NameGenerator.prototype.add = function ( name ) {
 
     if ( this.names.indexOf( name ) !== -1 )
         throw new Error( 'Cannot redefine ' + name );
@@ -40,7 +40,7 @@ SecretSanta.prototype.add = function ( name ) {
 
 };
 
-SecretSanta.prototype.generate = function () {
+NameGenerator.prototype.generate = function () {
 
     var pairings = Object.create( null );
     var candidatePairings = Object.create( null );
