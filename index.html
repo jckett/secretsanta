@@ -13,7 +13,7 @@
 
         <style>
             
-            .font1 {
+            @font-face {
                 font-family: customFont;
                 src: url(assets/Mona-Free.woff);
             }
@@ -175,22 +175,27 @@
         </div>
 
         <script id="input-placeholder" type="text/placeholder">
-            # You can add a user by adding a line
-            Santa
+            # Add participants on a new line
+            Jane
+            John
+            Jerry
+            Joe
 
-            # You can add some details if you want to, using parentheses after the name
-            Nicholas (the elf)
+            # Add notes to each participant in paranthesis if desired
+            Jane (likes mochi)
 
             # You can prevent someone from being paired with someone else
-            Maël !Aurélie
-            Aurélie !Maël
+            # Jane can't be assigned to John, but John can still be assigned to Jane
+            John !Jane
 
             # You can also exclude someone from being paired with multiple people
-            # Careful: too many exclusion rules can make your secret santa less interesting!
-            Rudolph !Santa !Nicholas (the elf)
+            # Careful: too many exclusion rules can make your pairings predictable
+            # John can't be paired with neither Jane nor Jerry, so he must be paired with Joe
+            John !Jane (likes mochi) !Jerry
 
-            # You can also cheat a bit and force someone to be paired with another
-            Nicholas (the saint) =Nicholas (the elf)
+            # If you're absolutely set on getting assigned a specific person, you can force the generator in your favor 
+            # Jane will get assigned to John but Jane's assigned participant is still left to chance
+            John = Jane
 
             ...
         </script>
