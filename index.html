@@ -16,8 +16,6 @@
                 font-family: customFont;
                 src: url(assets/Mona-Free.woff);
             }
-                
-                <span style="font-family: courier;">
 
             * {
                 box-sizing: border-box;
@@ -33,7 +31,7 @@
             }
 
             body {
-                background-image: none;
+                background-color: #e0cbd6;
                 background-position: bottom right;
                 background-repeat: no-repeat;
 
@@ -160,7 +158,7 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><span style="font-family: customFont;">Secret Santa Generator</h1>
+                    <h1><span style="font-family: customFont;">Random Pairing Generator</h1>
                     <p>No sign up or emails required. Simply type in the names of the people you want to include in the drawing to the right, and generate your pairings!</p>
                     <p>Most pairings are pretty straight forward, but you can prevent certain people from getting paired up with each other if necessary.</p>
                     <p>If you're interested in creating your own, feel free to find the original open source code <a href="https://github.com/arcanis/secretsanta">here</a></p>
@@ -169,7 +167,7 @@
 
             <form id="form" class="part">
                 <textarea id="input" class="input" autofocus></textarea>
-                <button type="submit" class="generate"><span style="font-family: customFont;">Generate your pairings</span></button>
+                <button type="submit" class="generate"><span style="font-family: customFont;">Generate Pairings</span></button>
                 <div id="result" class="result none"></div>
             </form>
 
