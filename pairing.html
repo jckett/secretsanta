@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Secret Santa Pairing</title>
+        <title>Random Name Pairing</title>
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
@@ -25,23 +25,12 @@
             }
 
             body {
-                background: url(./assets/snow.png), url(./assets/santa.png), url(./assets/snow.png), radial-gradient(#FB3B3B, #EF3D3D);
-                background-repeat: repeat, no-repeat, repeat, no-repeat;
+                background-color: #e0c8d5;
 
-                animation-name: snow;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-
-                font-family: 'Comic Sans MS';
+                font-family: 'Open Sans', sans-serif;
             }
 
-            @keyframes snow {
-                from { background-position: 130px 40px, bottom right, 0 0, 0 0; }
-                to { background-position: 130px 640px, bottom right, 0 300px, 0 0; }
-            }
-
-            .spirit-of-christmas {
+            .create-your-own {
                 display: block;
 
                 position: absolute;
@@ -53,7 +42,7 @@
                 font-size: 10px;
                 text-decoration: none;
 
-                color: #FFFFFF;
+                color: #000000;
             }
 
             .main {
@@ -71,17 +60,7 @@
                 margin: auto;
                 padding: 20px;
 
-                background: repeating-linear-gradient(
-                    45deg,
-                    #5CC48A,
-                    #5CC48A 30px,
-                    #FFFFFF 30px,
-                    #FFFFFF 60px,
-                    #EF3D3D 60px,
-                    #EF3D3D 90px,
-                    #FFFFFF 90px,
-                    #FFFFFF 120px
-                );
+                background: #a17188;
 
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
             }
@@ -175,8 +154,8 @@
                 </div>
             </div>
 
-            <a href="http://arcanis.github.io/secretsanta/" class="spirit-of-christmas">
-                Want to start your own Secret Santa with your friends? Click here to get started!
+            <a href="https://github.com/jckett/NamePicker" class="create-your-own">
+                Want to create your own generator? Click here to get started!
             </a>
 
         </div>
