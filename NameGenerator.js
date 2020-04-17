@@ -1,4 +1,4 @@
-var NameGenerator = function () {
+var Host = function () {
 
     this.names = [];
 
@@ -7,7 +7,7 @@ var NameGenerator = function () {
 };
 
 
-NameGenerator.prototype.add = function ( name ) {
+Host.prototype.add = function ( name ) {
 
     if ( this.names.indexOf( name ) !== -1 )
         throw new Error( 'Cannot redefine ' + name );
@@ -40,7 +40,7 @@ NameGenerator.prototype.add = function ( name ) {
 
 };
 
-NameGenerator.prototype.generate = function () {
+Host.prototype.generate = function () {
 
     var pairings = Object.create( null );
     var candidatePairings = Object.create( null );
