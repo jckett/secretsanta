@@ -15,6 +15,10 @@
                 font-family: customFont;
                 src: url(assets/Mona-Free.woff);
             }
+            
+            script {
+                font-family: customFont;
+            }
 
             * {
                 box-sizing: border-box;
@@ -133,7 +137,7 @@
                 <div class="content">
 
                     <div class="title">Hi <span id="name"></span>! You've been paired with</div>
-                    <script>document.getElementById('name').innerText = <span style="font-family: customFont;">name</span></script>
+                    <script>document.getElementById('name').innerText = name</script>
                         
                     <div class="pairing">
                         <div id="pairing-name"></div>
