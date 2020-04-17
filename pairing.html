@@ -10,6 +10,11 @@
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
 
         <style>
+            
+            @font-face {
+                font-family: customFont;
+                src: url(assets/Mona-Free.woff);
+            }
 
             * {
                 box-sizing: border-box;
@@ -128,8 +133,8 @@
                 <div class="content">
 
                     <div class="title">Hi <span id="name"></span>! You've been paired with</div>
-                    <script>document.getElementById('name').innerText = name</script>
-
+                    <script><span style="font-family: customFont;">document.getElementById('name').innerText = name</span></script>
+                        
                     <div class="pairing">
                         <div id="pairing-name"></div>
                         <div id="pairing-details"></div>
