@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Secret Santa Generator</title>
+        <title>Random Pairing Generator</title>
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
@@ -12,6 +12,12 @@
         <script src="./SecretSanta.js"></script>
 
         <style>
+            @font-face{
+                font-family: customFont;
+                src: url(assets/Mona-Free.woff);
+            }
+                
+                <span style="font-family: courier;">
 
             * {
                 box-sizing: border-box;
@@ -27,11 +33,11 @@
             }
 
             body {
-                background-image: url(assets/santa.png);
+                background-image: none;
                 background-position: bottom right;
                 background-repeat: no-repeat;
 
-                font-family: 'Comic Sans MS';
+                font-family: 'Open Sans', sans-serif;
             }
 
             .main {
@@ -54,7 +60,7 @@
             .instructions a {
                 text-decoration: none;
 
-                color: #0CB50C;
+                color: #a17188;
             }
 
             .input {
@@ -64,7 +70,7 @@
                 width: 100%;
                 flex: auto;
 
-                border: 10px solid #0CB50C;
+                border: 10px solid #a17188;
                 border-radius: 10px;
 
                 padding: 15px;
@@ -81,18 +87,18 @@
                 flex: none;
                 height: 100px;
 
-                border: 10px solid #0CB50C;
+                border: 10px solid #a17188;
                 border-radius: 10px;
 
                 font-family: inherit;
                 font-size: 40px;
 
-                background-color: #EA1212;
-                color: #FFFFFF;
+                background-color: rgba(255, 255, 255, .7);
+                color: #000000;
             }
 
             .generate:focus {
-                border-color: #E6E020;
+                border-color: #84576d;
 
                 outline: none;
             }
@@ -102,7 +108,7 @@
 
                 flex: none;
 
-                border: 10px solid #E6E020;
+                border: 10px solid #84576d;
                 border-radius: 10px;
 
                 padding: 15px;
@@ -154,17 +160,16 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Secret Santa Generator</h1>
-                    <p>No signup, no email, no bullshit. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
-                    <p>In the most common case (no exclusion rules, pair each guest with another at random), enter the name of your guests one line at a time. Once done, press "generate" and you're all set: send the generated links to your guests (by mail, chat, whatever floats your boat) and their pairing will be revealed to them (and only them) once they open the link.</p>
-                    <h2>Where does this tool come from?</h2>
-                    <p>I wanted to make a Secret Santa over Facebook without having to reveal to anyone my guests email addresses (so nothing that would require a backend). I also wanted not to know who was paired with me, so I had to find a way to somehow obfuscate the information. And being a developer, well, my first thought was "Let's AES it, for fun and profits!". Classic.</p>
+                    <h1><span style="font-family: customFont;">Secret Santa Generator</h1>
+                    <p>No sign up or emails required. Simply type in the names of the people you want to include in the drawing to the right, and generate your pairings!</p>
+                    <p>Most pairings are pretty straight forward, but you can prevent certain people from getting paired up with each other if necessary.</p>
+                    <p>If you're interested in creating your own, feel free to find the original open source code <a href="https://github.com/arcanis/secretsanta">here</a></p>
                 </div>
             </div>
 
             <form id="form" class="part">
                 <textarea id="input" class="input" autofocus></textarea>
-                <button type="submit" class="generate">Generate your pairings</button>
+                <button type="submit" class="generate"><span style="font-family: customFont;">Generate your pairings</span></button>
                 <div id="result" class="result none"></div>
             </form>
 
